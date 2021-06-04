@@ -13,9 +13,6 @@ function getRandomInt(min, max) {
 getRandomInt(0, 100);
 
 function getRandomFloatInt(min, max, fixed) {
-  min = Math.abs(min);
-  max = Math.abs(max);
-
   if (min >= max) {
     return('min value cannot be bigger or same than max');
   } else if (min || max < 0) {
