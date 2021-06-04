@@ -1,24 +1,27 @@
 function getRandomInt(min, max) {
-  min = Math.abs(Math.ceil(min));
-  max = Math.abs(Math.floor(max));
+  min = Math.ceil(min);
+  max = Math.floor(max);
 
   if (min >= max) {
-    console.log('min value cannot be bigger or same than max');
+    return('min value cannot be bigger or same than max');
+  } else if (min || max < 0) {
+    return('number cannot be negative');
   } else {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 }
-console.log(getRandomInt(0, 100));
+getRandomInt(0, 100);
 
 function getRandomFloatInt(min, max, fixed) {
   min = Math.abs(min);
   max = Math.abs(max);
-  fixed = 0;
 
   if (min >= max) {
-    console.log('min value cannot be bigger or same than max');
+    return('min value cannot be bigger or same than max');
+  } else if (min || max < 0) {
+    return('number cannot be negative');
   } else {
-    return (Math.random() * (max - min + 1)) + min;
+    return ((Math.random() * (max - min + 1)) + min).toFixed(fixed);
   }
 }
-console.log(getRandomFloatInt(0, 100, 10));
+getRandomFloatInt(0, 100, 10);
