@@ -5,8 +5,8 @@ function getRandomInt(min, max) {
   if (min >= max) {
     console.log('min value cannot be bigger or same than max');
   } else {
-      return Math.floor(Math.random() * (max - min + 1)) + min;
-    }
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
 }
 console.log(getRandomInt(0, 100));
 
@@ -18,7 +18,7 @@ function getRandomFloatInt(min, max, fixed) {
   if (min >= max) {
     console.log('min value cannot be bigger or same than max');
   } else {
-      return (Math.random() * (max - min + 1)) + min;
-    }
+    return (Math.random() * (max - min + 1)) + min;
+  }
 }
 console.log(getRandomFloatInt(0, 100, 10));
