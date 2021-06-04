@@ -13,6 +13,7 @@ console.log(getRandomInt(0, 100));
 function getRandomFloatInt(min, max, fixed) {
   min = Math.abs(min);
   max = Math.abs(max);
+  fixed = 0;
 
   if (min >= max) {
     console.log('min value cannot be bigger or same than max');
