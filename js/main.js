@@ -1,5 +1,5 @@
-import {getRandomPositiveFloat} from '/utils/get-random-positive-float.js';
-import {getRandomPositiveInteger} from '/utils/get-random-positive-integer.js';
+import {getRandomPositiveFloat} from './utils/get-random-positive-float.js';
+import {getRandomPositiveInteger} from './utils/get-random-positive-integer.js';
 
 const COUNT_OFFERS = 10;
 const TIMES = ['12:00', '13:00', '14:00'];
@@ -32,8 +32,8 @@ const getRandomArray = function (array) {
   const randomInt = getRandomPositiveInteger(0, array.length - 1);
   for (let el = 0; el <= randomInt; el++) {
     const item = getRandomItem(array);
-    if (result.includes(item)) { continue; }
-    result.push(item);
+    if (!result.includes(item)) {
+      result.push(item);
   }
   return result;
 };
