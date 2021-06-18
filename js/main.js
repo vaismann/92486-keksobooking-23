@@ -34,8 +34,9 @@ const getRandomArray = function (array) {
     const item = getRandomItem(array);
     if (!result.includes(item)) {
       result.push(item);
+    }
+    return result;
   }
-  return result;
 };
 
 const createOffer = function () {
